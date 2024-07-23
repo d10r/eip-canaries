@@ -22,11 +22,11 @@ contract EIPCanaries {
         assembly { sstore(EIP_1153_CANARY.slot, create(0, add(bytecode, 0x20), mload(bytecode))) }
     }
 
-    function hasEIP3855() external view returns (bool yes) {
-        (yes, ) = EIP_3855_CANARY.staticcall(hex"deadbeef");
+    function hasEIP3855() external view returns (bool result) {
+        (result, ) = EIP_3855_CANARY.staticcall(hex"deadbeef");
     }
 
-    function hasEIP1153() external view returns (bool yes) {
-        (yes, ) = EIP_1153_CANARY.staticcall(hex"deadbeef");
+    function hasEIP1153() external view returns (bool result) {
+        (result, ) = EIP_1153_CANARY.staticcall(hex"deadbeef");
     }
 }

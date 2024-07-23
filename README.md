@@ -16,7 +16,8 @@ version of the chain.
 
 - Create a new yul object under `yul/` folder.
 - Compile the yul object `solc --evm-version=london --strict-assembly --bin`. Note: use london as target.
-- Create a new deployer and detection function in the EIPCanaries contract.
+- Create a new deployer and detection function in the `EIPCanaries` contract.
+- Create a new test case in `EIPCanaries.t.sol`, and modify `test.sh`.
 - Deploy the EIPCanaries and publish.
 
 **Local Test**

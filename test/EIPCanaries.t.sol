@@ -22,4 +22,10 @@ contract EIPCanariesTest is Test {
         assertNotEq(_c.EIP_1153_CANARY(), address(0));
         assertEq(_c.hasEIP1153(), vm.envBool("EIP_1153_EXPECTED"));
     }
+
+    function testHasEIP5656() external view {
+        console.log("EIP_5656_CANARY", _c.EIP_5656_CANARY());
+        assertNotEq(_c.EIP_5656_CANARY(), address(0));
+        assertEq(_c.hasEIP5656(), vm.envBool("EIP_5656_EXPECTED"));
+    }
 }
